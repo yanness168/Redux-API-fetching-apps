@@ -1,0 +1,7 @@
+export const STORE_URL = "STORE_URL";
+export const STORE_NAME = "STORE_NAME";
+export const CLEAR_URL = "CLEAR_URL";
+export const CLEAR_NAME = "CLEAR_NAME";
+export const FETCH_MEMES_BEGIN   = 'FETCH_MEMES_BEGIN';
+export const FETCH_MEMES_SUCCESS = 'FETCH_MEMES_SUCCESS';
+export const FETCH_MEMES_FAILURE = 'FETCH_MEMES_FAILURE';
