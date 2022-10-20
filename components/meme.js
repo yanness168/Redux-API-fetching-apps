@@ -1,7 +1,7 @@
 import * as React from'react';
 import { useEffect} from 'react';
 import { connect } from 'react-redux'; //{connect} connects a React component with Redux store
-import { View, Text, Button, Image, TextInput, StyleSheet, StatusBar, FlatList, TouchableOpacity } from 'react-native';
+import { SafeAreaView,View, Text, Button, Image, TextInput, StyleSheet, StatusBar, FlatList, TouchableOpacity } from 'react-native';
 import { fetchMemes } from '../redux/actions/fetchMeme'
 import { store_name, store_url, clear_name, clear_url} from '../redux/actions/index'
 
@@ -33,7 +33,7 @@ const GetMeme = ({u, memes, loading, error, fetchMemes, url, name, store_name, s
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <TouchableOpacity onPress={handleOnClick} style={styles.bnt}>
                 <Text style={styles.bText}>Get some memes!!!</Text>
             </TouchableOpacity>
@@ -44,9 +44,9 @@ const GetMeme = ({u, memes, loading, error, fetchMemes, url, name, store_name, s
                 renderItem={({ item, index }) => 
                 (<View styles={styles.flatlist}>
                     <Text>{name[index]}</Text>
-                    <Image source={item} style={{ width:260, height:300, borderWidth:1, margin: 10, borderColor:'#FFB6C1'}}/>
+                    <Image source={item} style={{ width:200, height:200, borderWidth:1, margin: 10, borderColor:'#FFB6C1'}}/>
                 </View>)}/>
-        </View>
+        </SafeAreaView>
     )
 }
 
