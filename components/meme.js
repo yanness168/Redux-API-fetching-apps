@@ -43,8 +43,8 @@ const GetMeme = ({u, memes, loading, error, fetchMemes, url, name, store_name, s
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item, index }) => 
                 (<View styles={styles.flatlist}>
-                    <Text styles={{fontSize: 30}}>{name[index]}</Text>
-                    <Image source={item} style={{ width:260, height:300, borderWidth:2, borderColor:'#FFB6C1'}}/>
+                    <Text>{name[index]}</Text>
+                    <Image source={item} style={{ width:260, height:300, borderWidth:1, margin: 10, borderColor:'#FFB6C1'}}/>
                 </View>)}/>
         </View>
     )
@@ -54,13 +54,13 @@ const styles = StyleSheet.create({
     container: {
         margin: 25,
         backgroundColor: '#fff',
-        flex: 1,
+        flex: 3,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        direction: 'ltr',
+        writingDirection: 'rtl',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
-        backgroundColor: "lightblue"
+        backgroundColor: "lightblue",
     },
     bnt:{
         height: 30,
@@ -74,9 +74,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     memeList:{
-        margin: 30,
-        alignContent:'Stretch',
+        marginHorizontal: 300,
         width:"100%",
-    }
+    },
+    flatlist: {
+        margin: 10,
+        backgroundColor: 'black',
+        backgroundWidth: 2,
+    },
 })
 export default connect(mapStateToProps, mapDispatchToProps)(GetMeme);
