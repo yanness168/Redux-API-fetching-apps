@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "a-redux",
+    "name": "Meme a meme",
     "slug": "a-redux",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,7 +18,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleDisplayName": "Yummy meme"
+      }
     },
     "android": {
       "adaptiveIcon": {
